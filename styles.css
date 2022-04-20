@@ -2,3 +2,125 @@
 body {
   font-family: 'Inter', Helvetica, Arial, san-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Chakra+Petch:wght@500&family=Cinzel&family=Fugaz+One&family=Inter&family=Monoton&family=Orbitron:wght@900&family=Oswald:wght@500&family=Roboto+Slab&family=Source+Code+Pro:wght@400;700&family=Ultra&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+ header {
+    position: relative;
+    background-color: #400026;
+    box-shadow: 0px 10px 50px #121212;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 7;
+}
+
+header ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header ul a {
+    font-size: 16px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+}
+
+header ul li {
+    padding-top: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 24px;
+}
+
+header ul li a {
+    transition: color 300ms;
+}
+
+header ul li a:hover {
+    color: #FF90D3;
+}
+
+footer {
+    background-color: #400026;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hamburger-icon {
+    display: none;
+    cursor: pointer;
+    padding-top: 15px;
+}
+
+#hamburger-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 10px;
+    transition: 0.4s;
+}
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -7px);
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    height: calc(100vh - 80px);
+    width: 100%;
+}
+
+.mobile-menu li {
+    background-color: #400026;
+    width: 100%;
+}
+
+.mobile-menu a {
+    color: white
+}
+
+@media only screen and (max-width: 900px) {
+    header nav {
+        display: none;
+    }
+    #hamburger-icon {
+        display: block;
+    }
+}
