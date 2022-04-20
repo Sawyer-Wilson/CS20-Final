@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel='stylesheet' href='styles.css' type='text/css'/>
+       <link rel='stylesheet' href='lyrics.css' type='text/css'/> 
         <title>MUSE</title>
         <style>
         
@@ -36,7 +36,25 @@
         </style>
     </head>
     <body>
-        <header></header>
+        <header>
+            <h2><a href="index.html">MUSE</a></h2>
+            <nav>
+                <ul class=main-nav>
+                    <li><a href="songsotd.html">SONGS OTD</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+               <div class="bar1"></div>
+               <div class="bar2"></div>
+               <div class="bar3"></div>
+               <ul class="mobile-menu">
+                    <li id="home" ><a href="index.html">Home</a></li>
+                    <li id="the-experience" ><a href="songsotd.html">SONGS OTD</a></li>
+                    <li id="contact-us" ><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
+        </header>
 
        <!-- <div class="hero-image">
             <div class="hero-text">  -->
@@ -50,8 +68,12 @@
             <p>Feeling uninspired and looking for new music? Welcome to MUSE: Your primary source of music inspiration. Check out our five new songs of the day!</p>
         </main>
         <br><br>
-        <footer></footer>
+        <footer>Copyright &copy; 2022 MUSE</footer>
 
+        <script language="javascript">
+            function toggleMobileMenu(menu) {
+                menu.classList.toggle('open');
+            }  
        </script>
     </body>
 </html>
