@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel='stylesheet' href='lyrics.css' type='text/css'/> 
+        <title>MUSE</title>
+    </head>
+    <body>
+        <header>
+            <h1><a href="index.html">MUSE</a></h1>
+            <nav>
+                <ul class=main-nav>
+                    <li><a href="songsotd.html">SONGS OTD</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+               <div class="bar1"></div>
+               <div class="bar2"></div>
+               <div class="bar3"></div>
+               <ul class="mobile-menu">
+                    <li id="home" ><a href="index.html">Home</a></li>
+                    <li id="the-experience" ><a href="songsotd.html">SONGS OTD</a></li>
+                    <li id="contact-us" ><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <h1>LYRICS</h1>
+            <div id="song-container">
+                <div id="title"></div>
+                <div id="artist"></div>
+                <div id="album"></div>
+            </div>
+            <div id="lyrics-container"></div>
+        </main>
+
+        <footer>
+            Copyright &copy; 2022 MUSE
+        </footer>
+        
+        <script language="javascript">
+            function toggleMobileMenu(menu) {
+                menu.classList.toggle('open');
+            }  
+       </script>
+    </body>
+</html>
