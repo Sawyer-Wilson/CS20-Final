@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel='stylesheet' href='styles.css' type='text/css'/> 
+        <title>Farmers Market</title>
+        
+        <style> 
+            /*contact form styling*/
+            * {box-sizing: border-box;}
+
+            body {
+               /*james-stamler-k3heD_KwH0A-unsplash.jpg */
+               /*background-image: linear-gradient(rgb(95, 144, 163),rgb(46, 80, 94));*/
+
+               background-size:1200px 1000px;
+               background-image:
+              linear-gradient(to bottom, rgba(95, 144, 163, 0.9), rgba(46, 80, 94, 0.76)),
+               url('james-stamler-k3heD_KwH0A-unsplash.jpg');
+            }
+
+            /*form text*/
+            input[type=text], select, textarea {
+              width: 100%;
+              padding: 12px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+              margin-top: 6px;
+              margin-bottom: 16px;
+              resize: vertical;
+            }
+
+            /*form submit button*/
+            input[type=submit] {
+              background-color: rgb(64, 93, 122);
+              color: white;
+              padding: 12px 20px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+
+            /*form submit button*/
+            input[type=submit]:hover {
+              background-color: #45a049;
+            }
+
+            /*form container*/
+            .container {
+              border-radius: 5px;
+              background-color: rgb(113, 187, 218);
+              padding: 20px;
+              width: 1000px;
+              margin: 0 auto;
+
+            }
+
+            /* Contact us page title*/
+            h2 {
+                text-align: center;
+                position: releative;
+                padding-top: 70px;
+                font-size: 70px;
+                color: white;
+                font-family: ;
+            }
+            p {
+              text-align: center;  
+              font-weight: bold;
+              color: white;
+            }
+            
+        </style> 
+    </head>
+    <body>
+      <header>
+      
+      </header>
+        
+        <main>
+            <h2>CONTACT US</h2>
+        </main>
+           
+          <br><br>
+          <!-- contact form div --> 
+          <div class="container">
+          <form onsubmit="return validate()" name="contact-form" method="post">
+          <!-- <label for="fname">First Name</label> --> 
+          <input type="text" id="fname" name="text" placeholder="First Name">
+
+          <!--<label for="lname">Last Name</label>  --> 
+          <input type="text" id="lname" name="text" placeholder="Last Name">
+
+          <!--<label for="email">Email</label> --> 
+          <input type="text" id="email" name="text" placeholder="Email">
+
+          <!-- <label for="subject">Subject</label> --> 
+          <textarea id="subject" name="subject" placeholder="Message" style="height:200px"></textarea>
+
+          <input type="submit" value="Submit" onclick="submitForm()">
+        </form>
+      </div>
+      
+        <br><br><br>
+        <div class =  contactinfo>
+            <p> Email: contactus@muse.com </p> 
+            <p> Phone number: 617-922-7113 </p> 
+          </div>
+         <br><br>
+        
+        
+        <script language="javascript">
+            function toggleMobileMenu(menu) {
+                menu.classList.toggle('open');
+            }
+
+            function validate() {    
+              var emptyField = false;    
+              for (var i = 0; i < 3; i++) {
+                if (document.forms["contact-form"][i].value == "")
+                  emptyField = true;
+              }
+              if (emptyField == true) {
+                alert("All fields are required.");
+              }
+              return false;
+            } 
+
+             function submitForm() {
+                alert("Your form as been submitted. You will recieve an email shortly!");
+              } 
+       </script>
+    
+    </body>
+</html>
