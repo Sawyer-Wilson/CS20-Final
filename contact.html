@@ -94,7 +94,23 @@
     </head>
     <body>
       <header>
-      
+        <h2><a href="index.html">MUSE</a></h2>
+            <nav>
+                <ul class=main-nav>
+                    <li><a href="songsotd.html">SONGS OTD</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+               <div class="bar1"></div>
+               <div class="bar2"></div>
+               <div class="bar3"></div>
+               <ul class="mobile-menu">
+                    <li id="home" ><a href="index.html">Home</a></li>
+                    <li id="the-experience" ><a href="songsotd.html">SONGS OTD</a></li>
+                    <li id="contact-us" ><a href="contact.html">CONTACT US</a></li>
+                </ul>s
+            </div>
       </header>
         
         <main>
@@ -130,7 +146,10 @@
         
         
         <script language="javascript">
-
+            function toggleMobileMenu(menu) {
+                menu.classList.toggle('open');
+            }  
+            
             function validate() {    
               var emptyField = false;    
               for (var i = 0; i < 3; i++) {
@@ -147,6 +166,8 @@
                 alert("Your form as been submitted. You will recieve an email shortly!");
               } 
        </script>
-    
+    <footer>
+            Copyright &copy; 2022 MUSE
+     </footer>
     </body>
 </html>
