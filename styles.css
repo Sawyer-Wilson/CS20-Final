@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Chakra+Petch:wght@500&family=Cinzel&family=Fugaz+One&family=Inter&family=Monoton&family=Orbitron:wght@900&family=Oswald:wght@500&family=Roboto+Slab&family=Source+Code+Pro:wght@400;700&family=Ultra&display=swap');
 
- * {
+body { 
+     font-family: 'Inter', Helvetica, Arial, san-serif;
+}
+
+* {
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     box-sizing: border-box;
