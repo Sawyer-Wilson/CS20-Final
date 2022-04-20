@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Chakra+Petch:wght@500&family=Cinzel&family=Fugaz+One&family=Inter&family=Monoton&family=Orbitron:wght@900&family=Oswald:wght@500&family=Roboto+Slab&family=Source+Code+Pro:wght@400;700&family=Ultra&display=swap');
 
+ * {
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 128px;
+    font-weight: 800;
+    margin-left: 20px;
+}
+
 h2 {
     margin-top: 14px;
     margin-left: 20px;
