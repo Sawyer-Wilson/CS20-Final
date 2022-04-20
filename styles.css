@@ -13,6 +13,23 @@ body {
     margin: 0;
 }
 
+h2 {
+    margin-top: 14px;
+    margin-left: 20px;
+}
+
+h2 a {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    transition: color 300ms;
+}
+
+h2 a:hover {
+    color: #FF90D3;
+}
 
  header {
     position: relative;
