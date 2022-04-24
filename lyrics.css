@@ -8,11 +8,11 @@
     margin: 0;
 }
 
-html body {
+body {
     color: white;
     font-family: 'Inter', Helvetica, Arial, san-serif;
-    background-image: linear-gradient(to bottom, #907EFF, #312A5C), url('marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg');
-    background-size: cover;
+    background-image: linear-gradient(to bottom, rgba(144, 126, 255, 0.5), rgba(49, 42, 92, 1)), url('marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg');
+    /* background-size: cover; */
     height: 100%;
 }
 
@@ -149,4 +149,12 @@ footer {
     #hamburger-icon {
         display: block;
     }
+}
+
+#lyrics-container {
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #907EFF;
+    padding: 30px;
+    margin: 20px;
 }

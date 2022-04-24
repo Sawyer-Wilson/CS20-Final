@@ -6,8 +6,25 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel='stylesheet' href='lyrics.css' type='text/css'/> 
         <title>MUSE</title>
+        <script language="javascript">
+            function toggleMobileMenu(menu) {
+                menu.classList.toggle('open');
+            }  
+
+            // gets the lyrics from the selected song
+            async function getLyrics(artist, title) {
+                result = document.getElementById("lyrics-container");
+                
+                const res = await fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`);
+                const data = await res.json();
+
+                const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
+
+                result.innerHTML = `<p>${lyrics}</p>`;
+            }
+       </script>
     </head>
-    <body>
+    <body onload="getLyrics(artist, title)">
         <header>
             <h2><a href="index.html">MUSE</a></h2>
             <nav>
@@ -42,11 +59,5 @@
         <footer>
             Copyright &copy; 2022 MUSE
         </footer>
-        
-        <script language="javascript">
-            function toggleMobileMenu(menu) {
-                menu.classList.toggle('open');
-            }  
-       </script>
     </body>
 </html>
