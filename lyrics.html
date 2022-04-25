@@ -12,19 +12,38 @@
             }  
 
             // gets the lyrics from the selected song
-            async function getLyrics(artist, title) {
+            async function getLyrics() {
+                const url = window.location.search;
+                const urlParams = new URLSearchParams(url);
+                const title = urlParams.get('title');
+                const artist = urlParams.get('artist');
+                const album = urlParams.get('album');
+                const cover = urlParams.get('cover');
+           
+                console.log(artist);
+                console.log(title);
+                console.log(album);
+
+                songCover = document.getElementById("album-cover");
+                songTitle = document.getElementById("title");
+                songArtist = document.getElementById("artist");
+                songAlbum = document.getElementById("album");
                 result = document.getElementById("lyrics-container");
                 
                 const res = await fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`);
                 const data = await res.json();
 
                 const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
-
+                
+                songCover.innerHTML = `<img src=birme-200x200/${cover}>`;
+                songTitle.innerHTML = title;
+                songArtist.innerHTML = artist;
+                songAlbum.innerHTML = album;
                 result.innerHTML = `<p>${lyrics}</p>`;
             }
        </script>
     </head>
-    <body onload="getLyrics(artist, title)">
+    <body onload="getLyrics()">
         <header>
             <h2><a href="index.html">MUSE</a></h2>
             <nav>
@@ -49,9 +68,11 @@
             <h1>LYRICS</h1>
             <div id="song-container">
                 <div id="album-cover"></div>
-                <div id="title"></div>
-                <div id="artist"></div>
-                <div id="album"></div>
+                <div id="song-info">
+                    <div id="title"></div>
+                    <div id="artist"></div>
+                    <div id="album"></div>
+                </div>
             </div>
             <div id="lyrics-container"></div>
         </main>
