@@ -172,7 +172,7 @@ footer {
 
 img {
     display: block;
-    max-width: 80%;
+    max-width: 30vw;
     height: auto;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -182,14 +182,15 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 30px;
 }
 
 #title {
-    font-size: calc(38px + (60 - 42) * (100vw - 768px) / (1440 - 768));
+    font-size: calc(32px + (60 - 52) * (100vw - 768px) / (1440 - 768));
 }
 
 #artist {
-    font-size: calc(28px + (60 - 48) * (100vw - 768px) / (1440 - 768));
+    font-size: calc(24px + (60 - 52) * (100vw - 768px) / (1440 - 768));
 }
 
 #album {
