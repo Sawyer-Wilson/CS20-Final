@@ -39,6 +39,11 @@ h2 a:hover {
     color: #FF90D3;
 }
 
+h5 {
+    display: none;
+}
+
+
 header {
     position: relative;
     background-color: #400026;
@@ -148,6 +153,16 @@ footer {
     }
     #hamburger-icon {
         display: block;
+    }
+    h1 {
+        display: none;
+    }
+    h5 {
+        display: block;
+        font-size: 60px;
+        font-weight: 800;
+        margin-left: 20px;
+        color: white;
     }
 }
 

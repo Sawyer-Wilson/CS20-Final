@@ -67,12 +67,26 @@
             }
             /* Contact us page title*/
             h4 {
-                position: relative;
                 /* padding-top: 70px; */
                 font-size: 100px;
                 color: white;
                 font-weight: 800;
                 margin-left: 20px;
+            }
+            h5 {
+              display: none;
+            }
+            @media only screen and (max-width: 900px) {
+                h4 {
+                  display: none;
+                }
+                h5 {
+                  display: block;
+                  color: white;
+                  font-size: 60px;
+                  font-weight: 800;
+                  margin-left: 20px;
+                }
             }
             p {
               text-align: center;  
@@ -107,6 +121,7 @@
         
       <main>
         <h4>CONTACT US</h4>
+        <h5>CONTACT US</h5>
           <!-- contact form div --> 
         <div class="container">
           <form onsubmit="return validate()" name="contact-form" method="post">
