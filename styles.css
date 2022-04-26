@@ -128,6 +128,7 @@ footer {
 }
 
 .mobile-menu li {
+    border-bottom: white solid 2px;
     background-color: #400026;
     width: 100%;
 }
