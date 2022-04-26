@@ -8,30 +8,14 @@
         <title>MUSE</title>
         
         <style> 
-
-          /*
-          @media only screen and (min-width: 800px) {
-                .container {
-                    display: block;
-                }
-            } */
-
-            /*contact form styling*/
-            * {box-sizing: border-box;}
-
             body {
-               /*james-stamler-k3heD_KwH0A-unsplash.jpg */
-               /*background-image: linear-gradient(rgb(95, 144, 163),rgb(46, 80, 94));*/
-
-               background-size:1200px 1000px;
-               background-image:
-              linear-gradient(to bottom, rgba(95, 144, 163, 0.9), rgba(46, 80, 94, 6)),
-               url('james-stamler-k3heD_KwH0A-unsplash.jpg');
-                font-family: 'Inter', Helvetica, Arial, san-serif;
+              background-size: cover;
+              background-image: linear-gradient(to bottom, rgba(95, 144, 163, 0.9), rgba(46, 80, 94, 6)), url('james-stamler-k3heD_KwH0A-unsplash.jpg');
+              font-family: 'Inter', Helvetica, Arial, san-serif;
             }
 
             /*form text*/
-            input[type=text], select, textarea {
+            input[type=text], textarea {
               width: 100%;
               padding: 12px;
               border: 1px solid #ccc;
@@ -52,11 +36,13 @@
               border-radius: 4px;
               cursor: pointer;
               font-family: 'Inter', Helvetica, Arial, san-serif;
+              transition: background-color 300ms;
             }
 
             /*form submit button*/
             input[type=submit]:hover {
-              background-color: #45a049;
+              background-color: white;
+              color: rgb(64, 93, 122);
             }
 
             /*form container*/
@@ -64,14 +50,24 @@
               border-radius: 5px;
               background-color: rgb(113, 187, 218);
               padding: 20px;
-              width: 100%;
+              /* width: 100%; */
+              margin-top: 20px;
               margin-left: 20px;
-              margin-right: 20px;             
+              margin-right: 20px;     
+              box-shadow: 0px 1px 50px #121212;
             }
 
+            form {
+              margin-left: 20px;
+              margin-right: 20px;
+            }
+            
+            label {
+              color: white;
+            }
             /* Contact us page title*/
             h4 {
-                position: releative;
+                position: relative;
                 /* padding-top: 70px; */
                 font-size: 100px;
                 color: white;
@@ -83,8 +79,7 @@
               font-weight: bold;
               color: white;
             }
-            #contact-info p {
-            }
+            
            
             
         </style> 
@@ -110,37 +105,34 @@
             </div>
       </header>
         
-        <main>
-            <h4>CONTACT US</h4>
-        </main>
-           
-          <br><br>
+      <main>
+        <h4>CONTACT US</h4>
           <!-- contact form div --> 
-          <div class="container">
+        <div class="container">
           <form onsubmit="return validate()" name="contact-form" method="post">
-          <!-- <label for="fname">First Name</label> --> 
-          <input type="text" id="fname" name="text" placeholder="First Name">
+            <label for="fname">First Name</label> 
+            <input type="text" id="fname" name="text" placeholder="First Name">
 
-          <!--<label for="lname">Last Name</label>  --> 
-          <input type="text" id="lname" name="text" placeholder="Last Name">
+            <label for="lname">Last Name</label>  
+            <input type="text" id="lname" name="text" placeholder="Last Name">
 
-          <!--<label for="email">Email</label> --> 
-          <input type="text" id="email" name="text" placeholder="Email">
+            <label for="email">Email</label> 
+            <input type="text" id="email" name="text" placeholder="Email">
 
-          <!-- <label for="subject">Subject</label> --> 
-          <textarea id="subject" name="subject" placeholder="Message" style="height:200px"></textarea>
+            <label for="subject">Subject</label> 
+            <textarea id="subject" name="subject" placeholder="Message" style="height:200px"></textarea>
 
-          <input type="submit" value="Submit" onclick="submitForm()">
-        </form>
-      </div>
+            <input type="submit" value="Submit" onclick="submitForm()">
+          </form>
+        </div>
       
-        <br><br><br>
+        <br><br>
         <div class =  contactinfo>
-            <p> Email: contactus@muse.com </p> 
+            <p> Email: contact@muse.com </p> 
             <p> Phone number: 617-922-7113 </p> 
           </div>
         <br><br>
-
+      </main>
         
         <script language="javascript">
             function toggleMobileMenu(menu) {

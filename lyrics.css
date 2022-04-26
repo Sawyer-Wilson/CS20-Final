@@ -186,6 +186,7 @@ img {
 }
 
 #title {
+    font-style: italic;
     font-size: calc(32px + (60 - 52) * (100vw - 768px) / (1440 - 768));
 }
 
