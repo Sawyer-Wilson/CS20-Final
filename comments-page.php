@@ -77,7 +77,7 @@
             }
             /*form submit button*/
             input[type=submit] {
-                position: fixed;
+                position: absolute;
                 right: 50px;
                 height: 42px;
                 background-color: #461478;
