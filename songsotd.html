@@ -90,6 +90,34 @@
 		overflow: hidden;
 	}
 	
+	@media(max-width:946px) {
+                main {
+                    height: 100%;
+                    background-position: center;
+                }
+                .container {
+                    width: 100%;
+                    height: auto;
+                    float: none;
+                    padding:20px;
+                }
+               
+                .cover_title {
+                    display:none;
+                }
+                .title {
+                    font-size: 30px;
+                }
+				.lyrics-discussion {
+                    font-size: 30px;
+                }
+				.lyrics{
+                    font-size: 30px;
+                }
+				.discussion {
+				}
+                
+			}
 	
 </style>
 	
@@ -115,7 +143,7 @@
                 </ul>
             </div>
         </header>
-	
+	<main>
 	<h1> TODAY'S FIVE </h1>
 	
 	<div class = "container">
@@ -217,6 +245,7 @@
                 menu.classList.toggle('open');
             }  
        </script>
+	</main>
 	<footer>Copyright &copy; 2022 MUSE</footer>
 </body>
 </html>
